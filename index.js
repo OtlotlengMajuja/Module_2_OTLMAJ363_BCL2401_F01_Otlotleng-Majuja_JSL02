@@ -40,6 +40,7 @@ const addNewGoal = () => {
 
     if (isDuplicate) {
         alert("Goal already exists!");
+        return;
     } else {
         const newGoal = document.createElement('li');
         newGoal.textContent = goalInput;
@@ -50,6 +51,7 @@ const addNewGoal = () => {
         });
     }
 };
+
 
 // Add event listener to the goal submit button
 document.querySelector('#submitGoal').addEventListener('click', addNewGoal);
