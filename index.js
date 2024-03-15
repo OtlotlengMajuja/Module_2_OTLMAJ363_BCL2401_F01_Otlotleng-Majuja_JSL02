@@ -25,6 +25,8 @@ const addNewGoal = () => {
     // ⚠️ Hint 1: Check for duplicates
     // Use 'goalList' to get all existing goals and check if 'goalInput' matches any of them.
 
+    const isDuplicate = Array.from(goalList.children).some(goal => goal.textContent.trim() === goalInput.trim())
+
     // ⚠️ Hint 2: Prevent duplicates
     // If a duplicate is found, display an alert to the user and don't add the goal to the list.
     // If it's not a duplicate, proceed with adding it as a new goal.
@@ -35,8 +37,6 @@ const addNewGoal = () => {
     // ⚠️ Hint 4: Event listener
     // The event listener that removes goals when clicked is not related to this issue.
     // Focus on preventing duplicates for now.
-
-    const isDuplicate = Array.from(goalList.children).some(goal => goal.textContent.trim() === goalInput.trim())
 
     if (isDuplicate) {
         alert("Goal already exists!");
